@@ -1924,6 +1924,27 @@
 
 		}
 
+/* Search */
+
+	.search {
+		display: -ms-flexbox;
+		-ms-flex-wrap: wrap;
+		-ms-flex-pack: justify;
+		-moz-justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
 /* Form */
 
 	form {
@@ -2969,7 +2990,34 @@
 			color: rgba(255, 255, 255, 0.55);
 			margin-bottom: 1.75em;
 		}
+		
+		#banner .search {
+			-ms-flex-pack: center;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			text-align: center;
+			margin: 0 auto 4em auto;
+		}
 
+			#banner .search div {
+				padding: 0 8em;
+			}
+
+				#banner .search div:last-child {
+					border: none;
+					padding-right: 0;
+				}
+
+				#banner .search div:first-child {
+					padding-left: 0;
+				}
+
+				#banner .search div p {
+					margin: 0;
+				}
+		
 		#banner .flex {
 			-ms-flex-pack: center;
 			-moz-justify-content: center;
@@ -3011,6 +3059,10 @@
 			#banner .flex div {
 				padding: 0 6em;
 			}
+			
+			#banner .search div {
+				padding: 0 6em;
+			}
 
 		}
 
@@ -3033,6 +3085,10 @@
 				}
 
 				#banner .flex div {
+					padding: 0 3em;
+				}
+				
+				#banner .search div {
 					padding: 0 3em;
 				}
 
@@ -3058,6 +3114,11 @@
 				}
 
 				#banner .flex div {
+					font-size: .85em;
+					padding: 0 1.5em;
+				}
+				
+				#banner .search div {
 					font-size: .85em;
 					padding: 0 1.5em;
 				}
@@ -3091,6 +3152,21 @@
 				}
 
 					#banner .flex div {
+						font-size: .85em;
+						padding: 0;
+						border: none;
+						margin-bottom: 1em;
+					}
+					
+				#banner .search {
+					-moz-flex-direction: column;
+					-webkit-flex-direction: column;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					margin: 0 auto 2em auto;
+				}
+
+					#banner .search div {
 						font-size: .85em;
 						padding: 0;
 						border: none;

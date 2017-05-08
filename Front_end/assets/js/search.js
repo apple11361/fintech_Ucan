@@ -1,14 +1,3 @@
-function change_location()
-{
-	var city = document.getElementById(city);
-	var Administrative_area = document.getElementById(Administrative_area);
-	
-	if(cuty == "台北市")
-	{
-		Administrative_area.innerHTML = ""
-	}
-}
-
 $(function(){
 
 	//得到下拉式目前選取的值 (value)
@@ -192,6 +181,10 @@ $(function(){
 			$cSel2.append($("<option></option>")
 				.attr("value", '烏來區 ')
 				.text('烏來區 '));
+		}
+		else if(city== "基隆市")
+		{
+			
 		}
 		
 	});

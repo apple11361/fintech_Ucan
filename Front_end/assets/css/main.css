@@ -2936,6 +2936,8 @@
 
 /* Banner */
 
+	html,body{height:100%;}
+
 	#banner {
 		padding: 8em 0 9em 0;
 		background-image: url(../../images/banner.jpg);
@@ -2943,6 +2945,7 @@
 		background-position: bottom;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+		height: 100%;
 		text-align: center;
 		position: relative;
 	}
@@ -3002,7 +3005,7 @@
 		}
 
 			#banner .search div {
-				padding: 0 8em;
+				padding: 0 2em;
 			}
 
 				#banner .search div:last-child {
@@ -3061,7 +3064,7 @@
 			}
 			
 			#banner .search div {
-				padding: 0 6em;
+				padding: 0 2em;
 			}
 
 		}
@@ -3089,7 +3092,7 @@
 				}
 				
 				#banner .search div {
-					padding: 0 3em;
+					padding: 0 2em;
 				}
 
 		}

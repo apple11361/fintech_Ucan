@@ -27,7 +27,7 @@
 				<div class="inner">
 					<nav id="nav" align="center">
 						<a href="index.html">首頁</a>
-						<a>購屋</a>
+						<a href="buy.html">購屋</a>
 						<a href="elements.html">賣屋</a>
 						<a href="elements.html">行情地圖</a>
 						<a href="elements.html">生活地圖</a>
@@ -44,6 +44,7 @@
 					
 						<div>
 							<select name="city" id="city">
+								<option value="0">縣市</option>
 								<option value="臺北市">臺北市</option>
 								<option value="新北市">新北市</option>
 								<option value="基隆市">基隆市</option>
@@ -71,24 +72,13 @@
 
 						<div>
 							<select name="Administrative_area" id="Administrative_area">
-								<option value="北投區">北投區</option>
-								<option value="士林區">士林區</option>
-								<option value="大同區">大同區</option>
-								<option value="中山區">中山區</option>
-								<option value="松山區">松山區</option>
-								<option value="內湖區">內湖區</option>
-								<option value="萬華區">萬華區</option>
-								<option value="中正區">中正區</option>
-								<option value="大安區">大安區</option>
-								<option value="信義區">信義區</option>
-								<option value="南港區">南港區</option>
-								<option value="文山區">文山區</option>
-
+								<option value="0">行政區</option>
 							</select>
 						</div>
 
 						<div>
-							<select>
+							<select name="total_price" id="total_price">
+								<option value="0">總價</option>
 								<option value="500">500萬以下</option>
 								<option value="1000">500~1000萬</option>
 								<option value="1500">1000~1500萬</option>
@@ -124,9 +114,6 @@
 
 					</div>
 
-					<footer>
-						<a href="#" class="button">Get Started</a>
-					</footer>
 				</div>
 			</section>
 

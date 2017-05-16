@@ -191,5 +191,91 @@ $(function(){
 
 });
 
+$(function(){
 
+	//得到下拉式目前選取的值 (value)
+
+	//get the text value of a selected option
+
+	var $cSel = $('select[name="total_price"]'); //指定要處理的特定元素物件名稱
+	var $cSel2 = $('select[name="total_price"]');
+	
+  	$cSel.on('change', function(){
+		var city = $cSel.val();
+			
+		if(city != "0")
+		{
+			$cSel2.find('option[value="0"]')
+			.remove();
+		}
+		
+	});
+
+});
+
+$(function(){
+
+	//得到下拉式目前選取的值 (value)
+
+	//get the text value of a selected option
+
+	var $cSel = $('select[name="city"]'); //指定要處理的特定元素物件名稱
+	var $cSel2 = $('select[name="city"]');
+	
+  	$cSel.on('change', function(){
+		var city = $cSel.val();
+			
+		if(city != "0")
+		{
+			$cSel2.find('option[value="0"]')
+			.remove();
+		}
+		
+	});
+
+});
+
+$(function(){
+
+	//得到下拉式目前選取的值 (value)
+
+	//get the text value of a selected option
+
+	var $cSel = $('select[name="space"]'); //指定要處理的特定元素物件名稱
+	var $cSel2 = $('select[name="space"]');
+	
+  	$cSel.on('change', function(){
+		var city = $cSel.val();
+			
+		if(city != "0")
+		{
+			$cSel2.find('option[value="0"]')
+			.remove();
+		}
+		
+	});
+
+});
+
+$(function(){
+
+	//得到下拉式目前選取的值 (value)
+
+	//get the text value of a selected option
+
+	var $cSel = $('select[name="use"]'); //指定要處理的特定元素物件名稱
+	var $cSel2 = $('select[name="use"]');
+	
+  	$cSel.on('change', function(){
+		var city = $cSel.val();
+			
+		if(city != "0")
+		{
+			$cSel2.find('option[value="0"]')
+			.remove();
+		}
+		
+	});
+
+});
 

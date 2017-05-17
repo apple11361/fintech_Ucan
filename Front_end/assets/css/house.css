@@ -2760,5 +2760,41 @@
 		border: 3px solid #777;
 	}
 	
+/*** left_right_btn ***/
+	#left_btn{
+		position: absolute;
+		font-size: 5em;
+		color: rgba(144, 144, 144, 0.75);
+		top: 100px;
+		left: 10px;
+	}
+	
+	#right_btn{
+		position: absolute;
+		font-size: 5em;
+		color: rgba(255, 255, 255, 0.75);
+		top: 100px;
+		left: 390px;
+	}
+	
+	#left_btn:hover{
+		position: absolute;
+		font-size: 5em;
+		color: rgba(255, 255, 255, 1);
+		top: 100px;
+		left: 10px;
+		cursor: pointer;
+	}
+	
+	#right_btn:hover{
+		position: absolute;
+		font-size: 5em;
+		color: rgba(255, 255, 255, 1);
+		top: 100px;
+		left: 390px;
+		cursor: pointer;
+	}
+
+	
 	
 	

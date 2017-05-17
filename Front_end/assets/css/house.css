@@ -2746,12 +2746,19 @@
 						color: #96BB97; 
 					}
 			   
-/** img_table **/
-	.a{
+/** thumbnail **/
+	.thumbnail{
 		border: 3px solid #FFF;
 		height: auto;
 		width: auto;
 		width: 160px;
 		height: 120px;
 
-	}			   
+	}
+	
+	.thumbnail:hover{
+		border: 3px solid #777;
+	}
+	
+	
+	

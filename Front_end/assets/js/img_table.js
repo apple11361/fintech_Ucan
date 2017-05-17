@@ -1,12 +1,3 @@
-function a(me)
-{
-	me.style.border="3px solid #777";
-}
-
-function b(me)
-{
-	me.style.border="3px solid #FFF";
-}
 
 function change(a)
 {
@@ -14,11 +5,9 @@ function change(a)
 	s.onload = ch;
 	function ch()
 	{
-		var m = document.getElementById("main");
-		m.height = s.height;
-		m.width = s.width;
+		var m = document.getElementById("thumbnail");
 		m.src = s.src;
 	}
 	
-	s.src = "./img/"+a+".jpg";
+	s.src = "../images/0/"+a+".jpg";
 }

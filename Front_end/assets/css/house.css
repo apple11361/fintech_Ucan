@@ -2355,7 +2355,7 @@
 
 		#banner:before {
 			content: '';
-			/*background: rgba(0, 0, 0, 0.45);*/
+			background: rgba(0, 0, 0, 0.45);
 			position: absolute;
 			width: 100%;
 			height: 100%;
@@ -2590,65 +2590,58 @@
 		}
 	
 /*result_list*/
+
 #result_list {
 	width: 100%; 
-}
-
-	#result_list .result_item {
-		min-width: 680px;
-		width: 100%;
-		padding: 10px 0;
-		position: relative;
-		border-bottom: 1px dotted #D8D8D8;
-	}
+	padding: 0px 0px 800px 0px;
+}	
+		#result_list .item_box{}
 	
-	#result_list .result_item:hover {
-		background-color: #f8f8f8; 
-	}
-	
-		#result_list .result_item .item_box{}
-	
-		#result_list .result_item .item_box_left {
+		#result_list .img_table{
 			position: absolute;
-			top: 10px;
-			left: 5px; 
+			top: 20px;
+			left: 50px; 
+		}
+	
+		#result_list .item_box_left {
+			position: absolute;
+			top: 150px;
+			left: 300px; 
 		}
         
-		#result_list .result_item .item_box_right {
+		#result_list .item_box_right {
 			max-width: 660px;
 			margin-left: 230px;
 			margin-right: 85px;
 			position: relative;
 		}
 
-			#result_list .result_item .item_box .item_imagebox {
-				width: 204px;
-				height: 154px;
+			#result_list .item_box .item_imagebox {
+				width: 442px;
+				height: 332px;
 				border: 1px solid #EDEDED;
 				position: relative;
 			}
 				
-				#result_list .result_item .item_box .item_imagebox .item_img {
-					width: 200px;
-					height: 150px;
+				#result_list .item_box .item_imagebox .item_img {
+					width: 440px;
+					height: 330px;
 					overflow: hidden;
 					position: absolute;
-					top: 2px;
-					left: 2px;
 				}
                     
-					#result_list .result_item .item_box .item_imagebox .item_img img{
-						width: 200px; 
+					#result_list .item_box .item_imagebox .item_img img{
+						width: 440px; 
 					}
 			
-			#result_list .result_item .item_box .item_titlebox {
+			#result_list .item_box .item_titlebox {
 				text-align:left;
 				min-width: 555px;
 				font-size: 1.2em;
 				margin-bottom: 0px;
 			}
                  
-				#result_list .result_item .item_box .item_titlebox .item_title {
+				#result_list .item_box .item_titlebox .item_title {
 					color: #1B72CB;
 					max-width: 265px;
 					margin-right: 15px;
@@ -2658,7 +2651,7 @@
 					display: inline-block;
 				}
                 
-				#result_list .result_item .item_box .item_titlebox .item_subtitle{
+				#result_list .item_box .item_titlebox .item_subtitle{
 					width: 380px;
 					color: #747474;
 					text-overflow: ellipsis;
@@ -2669,94 +2662,96 @@
 					*zoom : 1;
 				}
 				
-            #result_list .result_item .item_box .item_detailbox {
+            #result_list .item_box .item_detailbox {
 				text-align:left;
 				min-height: 90px;
 			}
 			
-				#result_list .result_item .item_box .item_detailbox .detail_left { 
+				#result_list .item_box .item_detailbox .detail_left { 
 					max-width: 75%; 
 				}
 				
-				#result_list .result_item .item_box .item_detailbox .detail_right{}
+				#result_list .item_box .item_detailbox .detail_right{}
 				
-				#result_list .result_item .item_box .item_detailbox .detail_line1{
+				#result_list .item_box .item_detailbox .detail_line1{
 					margin-bottom: 7px; 
 				}
 				
-					#result_list .result_item .item_box .item_detailbox .detail_line1 > span{
+					#result_list .item_box .item_detailbox .detail_line1 > span{
 						font-size: 1em;
 						font-weight: bold;
 						margin-right: 15px;
 						color: #000000; 
 					}
 					
-					#result_list .result_item a .item_box .item_detailbox .detail_line1 > span{
+					#result_list a .item_box .item_detailbox .detail_line1 > span{
 						color: #000000; 
 					}
 				
-				#result_list .result_item .item_box .item_detailbox .detail_line2{
+				#result_list .item_box .item_detailbox .detail_line2{
 					margin-bottom: 7px; 
 				}
 					
-					#result_list .result_item .item_box .item_detailbox .detail_line2 > span{
+					#result_list .item_box .item_detailbox .detail_line2 > span{
 						font-size: 0.8em;
 						margin-right: 10px;
 						color: #747474; 
 					}
 					
-					#result_list .result_item a .item_box .item_detailbox .detail_line2 > span{
+					#result_list a .item_box .item_detailbox .detail_line2 > span{
 						color: #747474; 
 					}
 						
-						#result_list .result_item .item_box .item_detailbox .detail_line2 > span .num{
+						#result_list .item_box .item_detailbox .detail_line2 > span .num{
 							font-size: 1.2em;
 							font-weight: bold;
 							color: #000000; 
 						}
 						
-						#result_list .result_item a .item_box .item_detailbox .detail_line2 > span .num{
+						#result_list a .item_box .item_detailbox .detail_line2 > span .num{
 							color: #000000; 
 						}
 						
-						#result_list .result_item .item_box .item_detailbox .detail_line2 > span.gray .num{
+						#result_list .item_box .item_detailbox .detail_line2 > span.gray .num{
 							color: #747474; 
 						}
 					
-					#result_list .result_item .item_box .item_detailbox .detail_line2 .item_community{
+					#result_list .item_box .item_detailbox .detail_line2 .item_community{
 						border: #747474 1px solid;
 						padding: 2px 3px 1px 2px;
 						font-size: 1.1em;
 						color: #333; 
 					}
 						
-						#result_list .result_item a .item_box .item_detailbox .detail_line2 > span.gray .num{
+						#result_list a .item_box .item_detailbox .detail_line2 > span.gray .num{
 							color: #747474; 
 						}
 					
-					#result_list .result_item .item_box .item_detailbox .detail_line2 > span.bold{
+					#result_list .item_box .item_detailbox .detail_line2 > span.bold{
 						font-size: 0.8em;
 						font-weight: bold;
 						color: #000000; 
 					}
 					
-					#result_list .result_item a .item_box .item_detailbox .detail_line2 > span.bold{
+					#result_list a .item_box .item_detailbox .detail_line2 > span.bold{
 						color: #000000; 
 					}
 				
-				#result_list .result_item .item_box .item_detailbox .detail_more{
+				#result_list .item_box .item_detailbox .detail_more{
 					text-decoration: underline;
 					color: #96BB97; 
 				}
 					
-					#result_list .result_item .item_box .item_detailbox .detail_more a{
+					#result_list .item_box .item_detailbox .detail_more a{
 						color: #96BB97; 
 					}
 			   
-	
-	
-	
-	
-	
-	
-	
+/** img_table **/
+	.a{
+		border: 3px solid #FFF;
+		height: auto;
+		width: auto;
+		width: 160px;
+		height: 120px;
+
+	}			   

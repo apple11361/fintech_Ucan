@@ -2678,7 +2678,9 @@
 					max-width: 75%; 
 				}
 				
-				#result_list .result_item .item_box .item_detailbox .detail_right{}
+				#result_list .result_item .item_box .item_detailbox .detail_right{
+					
+				}
 				
 				#result_list .result_item .item_box .item_detailbox .detail_line1{
 					margin-bottom: 7px; 

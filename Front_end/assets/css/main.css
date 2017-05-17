@@ -2566,15 +2566,16 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: transparent;
-		box-shadow: inset 0 0 0 3px #FFC863;
-		color: #FFC863 !important;
+		background-color: rgba(255, 231, 189, 0.15);
+		box-shadow: inset 0 0 0 3px #FF1212;
+		color: #FF1212 !important;
 		border-radius: 30px;
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 1em;
 		font-weight: 400;
+		font-family: Microsoft JhengHei;
 		height: 3em;
 		line-height: 3em;
 		letter-spacing: 2px;
@@ -2617,7 +2618,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: rgba(255, 231, 189, 0.15);
+			background-color: #ffffff;
 		}
 		
 		input[type="submit"]:hover {
@@ -2823,6 +2824,7 @@
 			color: inherit;
 			text-decoration: none;
 			font-size: 1.3em;
+			font-family: Microsoft JhengHei;
 		}
 
 			#header a:hover {

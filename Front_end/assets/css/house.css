@@ -2630,11 +2630,21 @@
 			left: 770px;
 		}
 		
+		#result_list .loan_score{
+			position: absolute;
+			top: 700px;
+			left: 400px;
+		}
+		
 			#result_list .detail ul{
 				text-align: left;
 			}
 			
 			#result_list .detail_2 ul{
+				text-align: left;
+			}
+			
+			#result_list .loan_score ul{
 				text-align: left;
 			}
 			

@@ -2636,6 +2636,12 @@
 			left: 400px;
 		}
 		
+		#result_list .insurance{
+			position: absolute;
+			top: 700px;
+			left: 770px;
+		}
+		
 			#result_list .detail ul{
 				text-align: left;
 			}
@@ -2645,6 +2651,10 @@
 			}
 			
 			#result_list .loan_score ul{
+				text-align: left;
+			}
+			
+			#result_list .insurance ul{
 				text-align: left;
 			}
 			

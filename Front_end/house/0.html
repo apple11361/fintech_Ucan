@@ -79,7 +79,14 @@
 						</div>
 					</div>
 					<div class="item_box_right item_box">
-						<button class="VR_button"></button>
+						<table>
+							<tbody>
+								<tr>
+									<td><button class="VR_button VR_button_1"></button></td>
+									<td><button class="VR_button VR_button_2"></button></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 					<div class="detail">
 						<ul>
@@ -99,17 +106,64 @@
 							<li><span>樓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp高：2樓</span></li>
 						</ul>
 					</div>
+					<div class="detail_3">
+						<p>特派員小組</p>
+						<table>
+							<tbody>
+								<tr>
+									<td><img class="photo"></td>
+									<td><img class="photo"></td>
+									<td><img class="photo"></td>
+								</tr>
+							</tbody>
+						</table>
+						<button class="button" style="vertical-align:middle"><span>預約看房 </span></button>
+					</div>
 					<div class="loan_score">
+						<form method="POST">
+							<table cellspacing="1" cellpadding="3" style="border-collapse: collapse" border="1">
+								<tbody>
+								<tr> 
+									<td class="a">貸款金額($):</td>
+									<td class="a"> <input type="text" size="20" name="financed" onchange="test_it(this)" value="1000000"></td>
+								</tr>
+								<tr> 
+									<td class="a">年利率(%):</td>
+									<td class="a"><input type="text" size="20" name="rate" onchange="test_it(this)" value="2.4"></td>
+								</tr>
+								<tr> 
+									<td class="a">貸款期數(月):</td>
+									<td class="a"><input type="text" size="20" name="months" onchange="test_it(this)" value="240"></td>
+								</tr>
+								<tr> 
+									<td class="a">每期應繳金額($):</td>
+									<td class="a"><input type="text" size="20" name="payment" onchange="test_it(this)"></td>
+								</tr>
+								<tr> 
+									<td class="a">全部應繳金額($):</td>
+									<td class="a"> <input type="text" size="20" name="total" onchange="test_it(this)"></td>
+								</tr>
+								<tr>
+									<td>&nbsp </td>
+								</tr>
+								<tr> 
+									<td class="a" colspan="2" align="center"> 
+									<input type="button" class="calculate" value="計 算" onclick="computeForm(this.form)"> 
+									<input type="reset" class="calculate" value="清 除" onclick="reset_it(this.form)">
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</form>
 						<ul>
+							<li><span>分數：<span id="score"></span></span></li>
 							<li><span>最高可貸額度：<span id="max_limit"></span></span></li>
-							<li><span>費用：<span id="fee_amount"></span></span></li>
 							<li><span>利率：<span id="interest_rate"></span></span></li>
-							<li><span>最高期數：<span id="max_loan_period"></span></span></li>
 						</ul>
 					</div>
 					<div class="insurance">
 						<ul>
-							<li><span>保險</span></li>
+							<li><span>保險費用</span></li>
 							<li><span>火險：</span></li>
 							<li><span>地震險：</span></li>
 							

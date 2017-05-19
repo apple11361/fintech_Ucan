@@ -38,8 +38,7 @@
 		<section id="banner">
 			<div class="inner">
 				<form class="search">
-				
-					<div>
+					<div id="city_box">
 						<select name="city" id="city">
 							<option value="0">縣市</option>
 							<option value="臺北市">臺北市</option>
@@ -67,13 +66,13 @@
 						</select>
 					</div>
 
-					<div>
+					<div id="Administrative_area_box">
 						<select name="Administrative_area" id="Administrative_area">
 							<option value="0">行政區</option>
 						</select>
 					</div>
 
-					<div>
+					<div id="total_price_box">
 						<select name="total_price" id="total_price">
 							<option value="0">總價</option>
 							<option value="500">500萬以下</option>
@@ -86,7 +85,7 @@
 						</select>
 					</div>
 
-					<div>
+					<div id="space_box">
 						<select name="space" id="space">
 							<option value="0">坪數</option>
 							<option value="20">0坪以上</option>
@@ -98,7 +97,7 @@
 						</select>
 					</div>
 					
-					<div>
+					<div id="use_box">
 						<select name="use" id="use">
 							<option value="0">分類</option>
 							<option value="1">透天</option>
@@ -112,7 +111,40 @@
 						</select>
 					</div>
 					
-					<input type="submit" value="搜尋">
+					<div id="age_box">
+						<select name="age" id="age">
+							<option value="0">屋齡</option>
+							<option value="1">五年以下</option>
+							<option value="2">五年~十年</option>
+							<option value="3">十年~二十年</option>
+							<option value="4">二十年~三十年</option>
+							<option value="5">三十年以上</option>
+						</select>
+					</div>
+					
+					<div id="judge_box">
+						<table>
+							<tbody style="text-align: left;color: #000000;">
+								<tr>
+									<td><input type="radio" name="R1" value="1">交通便利性&nbsp&nbsp&nbsp</td>
+									<td><input type="radio" name="R1" value="2">便利商店、超市</td>
+								</tr>
+								<tr>
+									<td><input type="radio" name="R1" value="3">嫌惡設施</td>
+									<td><input type="radio" name="R1" value="4">公園路地</td>
+								</tr>
+								<tr>
+									<td><input type="radio" name="R1" value="5">學區</td>
+									<td><input type="radio" name="R1" value="6">醫療機構</td>
+								</tr>
+								<tr>
+									<td><input type="radio" name="R1" value="7">郵局、銀行</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<input id="search_button" type="submit" value="搜尋">
 				</form>
 			</div>
 			

@@ -279,3 +279,53 @@ $(function(){
 
 });
 
+
+$(function(){
+
+	//得到下拉式目前選取的值 (value)
+
+	//get the text value of a selected option
+
+	var $cSel = $('select[name="age"]'); //指定要處理的特定元素物件名稱
+	var $cSel2 = $('select[name="age"]');
+	
+  	$cSel.on('change', function(){
+		var city = $cSel.val();
+			
+		if(city != "0")
+		{
+			$cSel2.find('option[value="0"]')
+			.remove();
+		}
+		
+	});
+
+});
+
+function enhancedRadio() 
+{  
+	var r = document.forms[0].elements[this.name];  
+	for (var i=0;i<r.length;i++)
+	{  
+		if (r[i].index != this.index)  
+		r[i].isChecked = false;  
+	}  
+	this.isChecked = !this.isChecked;  
+	this.checked = this.isChecked;  
+}  
+function deployRadioEvent() 
+{  
+	var f = document.forms[0];  
+	for (var i=0;i<f.elements.length;i++)
+	{ 
+		var e = f.elements[i]; 
+		if (e.type == "radio") 
+		{ 
+			e.onclick = enhancedRadio;  
+			e.setAttribute("isChecked",false);  
+			e.setAttribute("index",i); 
+		}     
+	}     
+}  
+
+deployRadioEvent();  

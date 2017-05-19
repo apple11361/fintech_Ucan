@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="noIE" lang="en-TW">
+<head>
+    <title>Blockchain --- Personal Information</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        overflow-y: visible;
+        background-color:white;				
+    }
+    .nav_left {
+        position:fixed;
+        height: calc(100vh - 80px);
+        float:left;
+        overflow:hidden;
+    }
+    .nav_left:hover {
+        overflow:auto;
+    }
+    #mask {
+        position:absolute;
+        background-color: black;
+        opacity: 0.3;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        z-index: 999;
+    }
+    #sub{
+        position:absolute;
+        width:80vw;
+        height:100vh;
+    }
+    #League{
+        line-height:55px;
+        font-size:1em;
+        font-weight: bold;
+        color:white;
+    }
+    #League:hover{
+        opacity:0.7;
+    }
+    #contain{
+        height:100vh;
+        overflow:auto;	
+    }
+    </style>
+    <script>
+        var invocation = new XMLHttpRequest();
+        var opacity=0; 
+        var ip = "http://192.168.207.29:3000/";
+        var txid = new Array(5000);
+        var hashs = new Array(5000);
+        var i, cnt = 0;
+        for (i = 0; i < 6; ++i) {
+            txid[i] = new Array(6);
+            hashs[i] = new Array(6);
+        }
+        function addOpacity(){  
+            opacity+=1;  
+            document.body.style.filter="alpha(opacity="+opacity+")";  
+            document.body.style.opacity=opacity/100;  
+            if(opacity!=100)setTimeout(function(){addOpacity();},5);
+        } 
+
+        /*function testCard() {
+            if (typeof sessionkey == 'undefined') {
+                alert("You havn't done MAKA!");
+                addOpacity();
+                document.getElementById("mask").style = "display:none;";
+            }
+            else
+                request();
+        }*/
+
+        function sendRequest(action, body) {
+            return $.ajax({
+                url: action, 
+                dataType : 'json',
+                type: 'post',
+                data: {
+                    data: JSON.stringify(body)
+                }
+            });
+        }
+	
+        function request() {
+            //var uid = prompt("Please enter your name");
+            addOpacity();
+            //document.getElementById("mask").style = "display:none;";
+            var  userRequest = {
+                'uid': uid,
+                'league': 'finance'
+            };
+            var encryptedRequest = HELPER_GenerateEncryptedRequest(userRequest, sessionKey);
+
+            sendRequest('http://localhost:8080/LifeChain/search.jsp', encryptedRequest).done(function (data) {
+                var json = $.parseJSON(HELPER_DecryptString(data.trim(), sessionKey));
+                document.getElementById("mask").style = "display:none;";
+                var table1 = $("#table");
+                $.each(json, function(key,value) {
+                    var rowNew = $("<tr><td></td><td></td><td></td><td></td><td></td><td><button type='button' class='btn btn-info' onclick='verify("+ cnt +");'>Verify</button></td></tr>");
+                    rowNew.children().eq(0).text(value['Time']);
+                    rowNew.children().eq(1).text(value['Src']);
+                    rowNew.children().eq(2).text(value['Dst']);
+                    rowNew.children().eq(3).text(value['Type'] + " -- " + value['Currency'] + " : " + value['Quantity']);
+                    //rowNew.children().eq(3).text(value['Type'] + " -- " + value['Currency'] + " : 10000000");
+                    rowNew.children().eq(4).text(value['TXID']);
+                    rowNew.children().eq(5).val(cnt);
+                    rowNew.appendTo(table1);
+                    txid[cnt][0] = value['TypeTXID'];
+                    txid[cnt][1] = value['DstTXID'];
+                    txid[cnt][2] = value['SrcTXID'];
+                    txid[cnt][3] = value['CurrencyTXID'];
+                    txid[cnt][4] = value['QuantityTXID'];
+                    txid[cnt][5] = value['TimeTXID'];
+                    hashs[cnt][0] = value['Type'];
+                    hashs[cnt][1] = value['Dst'];
+                    hashs[cnt][2] = value['Src'];
+                    hashs[cnt][3] = value['Currency'];
+                    //hashs[cnt][4] = "10000000";
+		    hashs[cnt][4] = value['Quantity'];
+                    hashs[cnt][5] = value['Time'];
+                    cnt++;
+                });
+            }).fail(function() {
+                // 失敗
+                document.getElementById("mask").style = "display:none;";
+                alert("failed");
+            });
+        }
+        var forbar = 0;
+        function barswitch() {
+            if (forbar == 0) {
+                document.getElementById("bar-switch").style = "background-color:white; display:block; box-shadow: 0 0 15px";
+                forbar++;
+            }
+            else {
+                document.getElementById("bar-switch").style = "display:none;";
+                forbar--;
+            }
+        }
+        var checksum, varify_num;
+        function verify(num) {
+            document.getElementById("mask").style = "display:show;";
+            var table_hash = [asmCrypto.SHA256.hex(UTILS_StringToIntArray(hashs[num][0])),
+                                asmCrypto.SHA256.hex(UTILS_StringToIntArray(hashs[num][1])),
+                                asmCrypto.SHA256.hex(UTILS_StringToIntArray(hashs[num][2])),
+                                asmCrypto.SHA256.hex(UTILS_StringToIntArray(hashs[num][3])),
+                                asmCrypto.SHA256.hex(UTILS_StringToIntArray(hashs[num][4])),
+                                asmCrypto.SHA256.hex(UTILS_StringToIntArray(hashs[num][5]))];
+            checksum = 0;
+            verify_num = 0;
+            for (i = 0; i < 6; ++i) {
+                var userRequest = {
+                        txid: txid[num][i]
+                    };
+                verifyRequest(ip, userRequest, table_hash[i]);
+            }
+        }
+        function verifyRequest(action, body, local_hash) {
+            $.ajax({
+                type: "GET",
+                async: false,
+                url: ip,
+                data: "txid=" + body.txid,
+                //dataType: "jsonp",//指定以jsonp方式執行
+                //data: JSON.stringify(body),
+                //jsonp: "call",//"mycallback"會以GET的變數名稱傳送，沒指定時，jQuery使用"callback"當變數名稱
+                //jsonpCallback: "callback",//"mycallback"變數的值，沒指定時，jQuery隨機產生
+                success: function(data) {
+                        data = JSON.parse(data);
+                        console.log(data);
+                        var verified_string = data.vout[0].items[0].key;
+                        console.log("verified_string : " + verified_string);
+                        verify_num++;
+                        if (local_hash == verified_string)
+                            checksum++;
+                        if (verify_num == 6) {
+                            if(checksum == 6) 
+                                alert("驗證成功！");
+                            else
+                                alert("驗證失敗！");
+                            document.getElementById("mask").style = "display:none;";
+                        }
+                }, error: function(error) {
+                        alert('good luck?');					
+                        console.log("error :" + error);
+                        document.getElementById("mask").style = "display:none;";
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="request();" style="padding-top:80px;opacity:0;">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:80px;">
+        <a href="#" style="position:absolute; width:60px; left:30px; top:23px;" onclick="barswitch();"><i class="fa fa-bars fa-2x"></i></a>
+        <a href="choose.html"><img src="./assets/img/logo.png" style="position:absolute; width:60px; left:80px; top:10px;"></a>
+        <div class="container" style="padding-top:22px;width:50vw;">
+            <input type="text" class="form-control" placeholder="搜尋" >
+        </div>
+    </nav>
+    <div id="bar-switch" class="nav_left" style="background-color:white; display:none;">
+        <div class="container" style="width:200px">
+            <h1>聯盟</h1>
+            <div class="page">
+                <ul class="nav nav-pills nav-stacked text-left">
+                    <li>
+                        <a href="personal.html"><i class="fa fa-address-card"></i> 個資聯盟</a>
+                    </li>
+                    <li>
+                        <a href="census.html"><i class="fa fa-home"></i> 戶政聯盟</a>
+                    </li>
+                    <li>
+                        <a href="medicine.html"><i class="fa fa-plus-square"></i> 醫療聯盟</a>
+                    </li>
+                    <li>
+                        <a href="academic.html"><i class="fa fa-graduation-cap"></i> 學經歷聯盟</a>
+                    </li>
+                    <li>
+                        <a href="property.html"><i class="fa fa-briefcase"></i> 就業經歷聯盟</a>
+                    </li>
+                    <li>
+                        <a href="finance.html"><i class="fa fa-credit-card-alt"></i> 財經聯盟</a>
+                    </li>
+                    <li>
+                        <a href="tax.html"><i class="fa fa-university"></i> 稅務聯盟</a>
+                    </li>
+                </ul>
+            </div>			
+        </div>
+    </div>
+    <div id="mask">
+    </div>
+    <!---<div>
+    <form id="maka-form" method="post" onsubmit="return submitForm(this);">
+        <input type="file" name="profile" id="choosed-file" />
+        <input type="password" name="profilePass" id="profilePass" />
+        <button type="submit">doMAKA</button>
+    </form>
+    </div>--->
+    <div class="container">
+        <div id="contain" align="center" style="overflow:auto;height:calc(100vh - 80px);">
+            <h1 style="font-size:3em;padding-top:50px;padding-bottom:50px;">Recent blocks</h1>
+            <div class="table-responsive">
+                <table id="table" class="table table-striped">
+                    <tr>
+                        <th width="15%">Time</th>
+                        <th width="10%">Source</th>
+                        <th width="10%">Destination</th>
+                        <th width="35%">Information</th>
+                        <th width="20%">TXID</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.1.1.min.js"></script>
+<script src="assets/js/asmcrypto.js"></script>
+<script src="assets/js/PFCCTR.js"></script>
+<script src="assets/js/Utility.js"></script>
+<script src="assets/MAKA/MAKA.js"></script>
+<script src="assets/MAKA/doMAKA.js"></script>
+<script src="assets/MAKA/loadCard.js"></script>
+<script src="assets/MAKA/usage.js"></script>
+</html>

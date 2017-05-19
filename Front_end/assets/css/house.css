@@ -2600,20 +2600,22 @@
 		#result_list .img_table{
 			position: absolute;
 			top: 20px;
-			left: 50px; 
+			left: 150px; 
 		}
 	
 		#result_list .item_box_left {
 			position: absolute;
 			top: 150px;
-			left: 300px; 
+			left: 400px; 
 		}
         
 		#result_list .item_box_right {
 			max-width: 660px;
 			margin-left: 230px;
 			margin-right: 85px;
-			position: relative;
+			position: absolute;
+			top: 250px;
+			left: 800px; 
 		}
 
 			#result_list .item_box .item_imagebox {
@@ -2794,7 +2796,59 @@
 		left: 390px;
 		cursor: pointer;
 	}
+	
+/**    VR button **/
+	.VR_button {
+		cursor:pointer;
+		position: relative;
+		font-size: 5;
+		width: 100px;
+		height: 100px;
+		text-align: center;
+		margin-right: 50px;
+		border-radius: 50%;
+		border:none;
+		background: -webkit-linear-gradient(top,#fff,#d5dbe1);
+		background: -moz-linear-gradient(top,#fff,#d5dbe1);
+		background: -ms-linear-gradient(top,#fff,#d5dbe1);
+		background: -o-linear-gradient(top,#fff,#d5dbe1);
+		linear-gradient(top,#fff,#d5dbe1);
+		-webkit-transition: all .13s ease-out;
+		   -moz-transition: all .13s ease-out;
+			 -o-transition: all .13s ease-out;
+				transition: all .13s ease-out;
+	}
+	
+	.VR_button:after {
+		display: inline-block;
+		font-family: 'icomoon';
+		font-size: 24px;
+		color: #bdc0c1;
+		content: attr(data-icon);
+		speak: none;
+		font-weight: normal;
+		-webkit-font-smoothing: antialiased;
+		width: 64px;
+		line-height: 64px;
+		margin: 10px;
+		border-radius: 32px;
+		background: -webkit-linear-gradient(top left,#fcfcfc 50%,#dfe4e8);
+	}
 
+	.VR_button:hover:after {
+		color: #19a6e4;
+		box-shadow: 0 1px 3px #d7d8d9 inset;
+		background: -webkit-radial-gradient(#dbeef8 ,#f2f4f6 50%);
+	}
 	
+	.VR_button:active {
+		top: 3px;
+		box-shadow: 0 1px 3px #d7d8d9 inset;
+	}
 	
-	
+	.VR_button:first-child:after {
+    content: "123";
+	}
+	.VR_button:last-child:after {
+		content: "VR";
+	}

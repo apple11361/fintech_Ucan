@@ -2618,6 +2618,30 @@
 			left: 800px; 
 		}
 
+		#result_list .detail{
+			position: absolute;
+			top: 510px;
+			left: 400px;
+		}
+		
+		#result_list .detail_2{
+			position: absolute;
+			top: 510px;
+			left: 770px;
+		}
+		
+			#result_list .detail ul{
+				text-align: left;
+			}
+			
+			#result_list .detail_2 ul{
+				text-align: left;
+			}
+			
+				#result_list span{
+					color: #ffffff;
+				}
+			
 			#result_list .item_box .item_imagebox {
 				width: 442px;
 				height: 332px;
@@ -2846,9 +2870,7 @@
 		box-shadow: 0 1px 3px #d7d8d9 inset;
 	}
 	
-	.VR_button:first-child:after {
-    content: "123";
-	}
 	.VR_button:last-child:after {
 		content: "VR";
 	}
+	

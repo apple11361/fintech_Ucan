@@ -14,10 +14,10 @@ function request() {
 
 	var  userRequest = {
 		//'client_id': uid,
-		'education_level': '4',
-		'occupation': '8',
+		'education_level': '2',
+		'occupation': '3',
 		'age': '2',
-		'annual_income': '350000',
+		'annual_income': '3000000',
 		'employment_year': '3',
 		'resident_status': '1',
 		'credit_card_status': '3',

@@ -2737,9 +2737,21 @@
 				
 				#result_list .result_item .item_box .item_detailbox .detail_right{
 					position: absolute;
-					top: 110px;
+					top: 40px;
 					left: 200px;
 				}
+				
+					#result_list .result_item .item_box .item_detailbox .detail_right span{
+						font-size: 0.8em;
+						margin-right: 10px;
+						color: #747474;
+					}
+					
+					#result_list .result_item .item_box .item_detailbox .detail_right span .num{
+							font-size: 1.2em;
+							font-weight: bold;
+							color: #000000; 
+						}
 				
 					#result_list .result_item .item_box .item_detailbox .detail_right .score_box{
 						height: 52px;

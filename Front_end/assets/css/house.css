@@ -2954,7 +2954,7 @@
 		margin-right: 50px;
 		border-radius: 50%;
 		border:none;
-		background: -webkit-linear-gradient(top,#fff,#d5dbe1);
+		background: -webkit-linear-gradient(top,#FFFFBF,#FFFFBF);
 		background: -moz-linear-gradient(top,#fff,#d5dbe1);
 		background: -ms-linear-gradient(top,#fff,#d5dbe1);
 		background: -o-linear-gradient(top,#fff,#d5dbe1);
@@ -2969,7 +2969,7 @@
 		display: inline-block;
 		font-family: 'icomoon';
 		font-size: 24px;
-		color: #bdc0c1;
+		color: #000000;
 		content: attr(data-icon);
 		speak: none;
 		font-weight: normal;
@@ -2978,11 +2978,11 @@
 		line-height: 64px;
 		margin: 10px;
 		border-radius: 32px;
-		background: -webkit-linear-gradient(top left,#fcfcfc 50%,#dfe4e8);
+		background: -webkit-linear-gradient(top left,#FFFFF2 50%,#FFFFF2);
 	}
 
 	.VR_button:hover:after {
-		color: #19a6e4;
+		color: #000000;
 		box-shadow: 0 1px 3px #d7d8d9 inset;
 		background: -webkit-radial-gradient(#dbeef8 ,#f2f4f6 50%);
 	}

@@ -182,9 +182,11 @@ $(function(){
 				.attr("value", '烏來區 ')
 				.text('烏來區 '));
 		}
-		else if(city== "基隆市")
+		else if(city == "臺南市")
 		{
-			
+			$cSel2.append($("<option></option>")
+				.attr("value", '0')
+				.text('行政區'));
 		}
 		
 	});
@@ -330,3 +332,68 @@ function deployRadioEvent()
 }  
 
 deployRadioEvent();*/
+
+var div_0 = document.getElementById("result_0");
+var div_1 = document.getElementById("result_1");
+var div_2 = document.getElementById("result_2");
+var div_3 = document.getElementById("result_3");
+var div_4 = document.getElementById("result_4");
+
+var inner_0 = div_0.innerHTML;
+var inner_1 = div_1.innerHTML;
+var inner_2 = div_2.innerHTML;
+var inner_3 = div_3.innerHTML;
+var inner_4 = div_4.innerHTML;
+
+function search()
+{
+	var check_box_1 = document.getElementById("1");
+	var check_box_3 = document.getElementById("3");
+	var select_1 = document.getElementById("city");
+	
+	if(check_box_1.checked && check_box_3.checked)
+	{
+		div_0.innerHTML = inner_0;
+		div_1.innerHTML = inner_1;
+		div_2.innerHTML = inner_2;
+		div_3.innerHTML = inner_4;
+		div_4.innerHTML = inner_3;
+	}
+	else
+	{
+		div_0.innerHTML = inner_0;
+		div_1.innerHTML = inner_1;
+		div_2.innerHTML = inner_2;
+		div_3.innerHTML = inner_3;
+		div_4.innerHTML = inner_4;
+	
+	}
+	
+
+	if(select_1.selectedIndex==13)
+	{
+		div_0.innerHTML = inner_3;
+		
+		div_1.style.borderBottom = "none";
+		div_2.style.borderBottom = "none";
+		div_3.style.borderBottom = "none";
+		div_4.style.borderBottom = "none";
+	
+		
+		div_1.innerHTML = "";
+		div_2.innerHTML = "";
+		div_3.innerHTML = "";
+		div_4.innerHTML = "";		
+	}
+	else
+	{
+		div_1.style.borderBottom = "1px dotted #D8D8D8";
+		div_2.style.borderBottom = "1px dotted #D8D8D8";
+		div_3.style.borderBottom = "1px dotted #D8D8D8";
+		div_4.style.borderBottom = "1px dotted #D8D8D8";
+	}
+	
+	
+}
+
+

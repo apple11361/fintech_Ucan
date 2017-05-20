@@ -126,11 +126,11 @@
 						<table>
 							<tbody style="text-align: left;color: #000000;">
 								<tr>
-									<td><input type="checkbox" name="R1" value="1">交通便利性&nbsp&nbsp&nbsp</td>
+									<td><input type="checkbox" name="R1" value="1" id="1">交通便利性&nbsp&nbsp&nbsp</td>
 									<td><input type="checkbox" name="R1" value="2">便利商店、超市</td>
 								</tr>
 								<tr>
-									<td><input type="checkbox" name="R1" value="3">嫌惡設施</td>
+									<td><input type="checkbox" name="R1" value="3" id="3">嫌惡設施</td>
 									<td><input type="checkbox" name="R1" value="4">公園路地</td>
 								</tr>
 								<tr>
@@ -144,74 +144,13 @@
 						</table>
 					</div>
 					
-					<input id="search_button" type="submit" value="搜尋">
+					<input id="search_button" type="button" value="搜尋" onclick="search()">
 				</form>
 			</div>
 			
 			<div class="inner">
 				<div id="result_list">
 					<div id="result_0" class="result_item">
-						<a href="house/0.html">
-							<div class="item_box_left item_box">
-								<div class="item_imagebox">
-									<div class="item_img">
-										<img src="images/0.jpg">
-									</div>
-								</div>
-							</div>
-							<div class="item_box_right item_box">
-								<div class="item_titlebox">
-									<span class="item_title">電梯大樓</span>
-									<span class="item_subtitle">嫌惡設施爆炸多</span>
-								</div>
-								<div class="item_detailbox">
-									<div class="detail_left">
-										<div class="detail_line1">
-											<span>台北市中山區錦州街</span>
-										</div>
-										<div class="detail_line2">
-											<span>總價：<span class="num">868</span>萬</span>
-										</div>
-										<div class="detail_line2">
-											<span>
-												<span class="num">2</span>
-												"房"
-												<span class="num">1</span>
-												"廳"
-												<span class="num">1</span>
-												"衛"
-											</span>
-										</div>
-										<div class="detail_more">更多資訊...</div>
-									</div>
-									<div class="detail_right">
-										<table>
-											<tbody>
-												<tr>
-													<td colspan="5"><span>屋齡：<span class="num">32</span>年</span></td>
-												</tr>
-												<tr>
-													<td colspan="5"><span>坪數：<span class="num">18</span>坪</span></td>
-												</tr>
-												<tr>
-													<td colspan="5"><span>每坪單價：<span class="num">48.36</span>萬元</span></td>
-												</tr>
-												<tr>
-													<td><div class="score_box"><img src="images/20.png"></div></td>
-													<td><div class="score_box"><img src="images/40.png" style="opacity:0.15;"></div></td>
-													<td><div class="score_box"><img src="images/60.png" style="opacity:0.15;"></div></td>
-													<td><div class="score_box"><img src="images/80.png" style="opacity:0.15;"></div></td>
-													<td><div class="score_box"><img src="images/100.png" style="opacity:0.15;"></div></td>
-													<td><span><span class="num" style="font-size: 25px;">&nbsp 18分</span></span></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div id="result_1" class="result_item">
 						<a href="house/1.html">
 							<div class="item_box_left item_box">
 								<div class="item_imagebox">
@@ -264,6 +203,67 @@
 													<td><div class="score_box"><img src="images/80.png" style="opacity:0.15;"></div></td>
 													<td><div class="score_box"><img src="images/100.png"></div></td>
 													<td><span><span class="num" style="font-size: 25px;">&nbsp 96分</span></span></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div id="result_1" class="result_item">
+						<a href="house/3.html">
+							<div class="item_box_left item_box">
+								<div class="item_imagebox">
+									<div class="item_img">
+										<img src="images/4.jpg">
+									</div>
+								</div>
+							</div>
+							<div class="item_box_right item_box">
+								<div class="item_titlebox">
+									<span class="item_title">電梯大樓</span>
+									<span class="item_subtitle">市中心的秘密花園</span>
+								</div>
+								<div class="item_detailbox">
+									<div class="detail_left">
+										<div class="detail_line1">
+											<span>台北市內湖區成功路四段</span>
+										</div>
+										<div class="detail_line2">
+											<span>總價：<span class="num">7350</span>萬</span>
+										</div>
+										<div class="detail_line2">
+											<span>
+												<span class="num">3</span>
+												"房"
+												<span class="num">2</span>
+												"廳"
+												<span class="num">2</span>
+												"衛"
+											</span>
+										</div>
+										<div class="detail_more">更多資訊...</div>
+									</div>
+									<div class="detail_right">
+										<table>
+											<tbody>
+												<tr>
+													<td colspan="5"><span>屋齡：<span class="num">3</span>年</span></td>
+												</tr>
+												<tr>
+													<td colspan="5"><span>坪數：<span class="num">68</span>坪</span></td>
+												</tr>
+												<tr>
+													<td colspan="5"><span>每坪單價：<span class="num">109</span>萬元</span></td>
+												</tr>
+												<tr>
+													<td><div class="score_box"><img src="images/20.png" style="opacity:0.15;"></div></td>
+													<td><div class="score_box"><img src="images/40.png" style="opacity:0.15;"></div></td>
+													<td><div class="score_box"><img src="images/60.png" style="opacity:0.15;"></div></td>
+													<td><div class="score_box"><img src="images/80.png" style="opacity:0.15;"></div></td>
+													<td><div class="score_box"><img src="images/100.png"></div></td>
+													<td><span><span class="num" style="font-size: 25px;">&nbsp 82分</span></span></td>
 												</tr>
 											</tbody>
 										</table>
@@ -395,34 +395,34 @@
 						</a>
 					</div>
 					<div id="result_4" class="result_item">
-						<a href="house/3.html">
+						<a href="house/0.html">
 							<div class="item_box_left item_box">
 								<div class="item_imagebox">
 									<div class="item_img">
-										<img src="images/4.jpg">
+										<img src="images/0.jpg">
 									</div>
 								</div>
 							</div>
 							<div class="item_box_right item_box">
 								<div class="item_titlebox">
 									<span class="item_title">電梯大樓</span>
-									<span class="item_subtitle">市中心的秘密花園</span>
+									<span class="item_subtitle">嫌惡設施爆炸多</span>
 								</div>
 								<div class="item_detailbox">
 									<div class="detail_left">
 										<div class="detail_line1">
-											<span>台北市內湖區成功路四段</span>
+											<span>台北市中山區錦州街</span>
 										</div>
 										<div class="detail_line2">
-											<span>總價：<span class="num">7350</span>萬</span>
+											<span>總價：<span class="num">868</span>萬</span>
 										</div>
 										<div class="detail_line2">
 											<span>
-												<span class="num">3</span>
+												<span class="num">2</span>
 												"房"
-												<span class="num">2</span>
+												<span class="num">1</span>
 												"廳"
-												<span class="num">2</span>
+												<span class="num">1</span>
 												"衛"
 											</span>
 										</div>
@@ -432,21 +432,21 @@
 										<table>
 											<tbody>
 												<tr>
-													<td colspan="5"><span>屋齡：<span class="num">3</span>年</span></td>
+													<td colspan="5"><span>屋齡：<span class="num">32</span>年</span></td>
 												</tr>
 												<tr>
-													<td colspan="5"><span>坪數：<span class="num">68</span>坪</span></td>
+													<td colspan="5"><span>坪數：<span class="num">18</span>坪</span></td>
 												</tr>
 												<tr>
-													<td colspan="5"><span>每坪單價：<span class="num">109</span>萬元</span></td>
+													<td colspan="5"><span>每坪單價：<span class="num">48.36</span>萬元</span></td>
 												</tr>
 												<tr>
-													<td><div class="score_box"><img src="images/20.png" style="opacity:0.15;"></div></td>
+													<td><div class="score_box"><img src="images/20.png"></div></td>
 													<td><div class="score_box"><img src="images/40.png" style="opacity:0.15;"></div></td>
 													<td><div class="score_box"><img src="images/60.png" style="opacity:0.15;"></div></td>
 													<td><div class="score_box"><img src="images/80.png" style="opacity:0.15;"></div></td>
-													<td><div class="score_box"><img src="images/100.png"></div></td>
-													<td><span><span class="num" style="font-size: 25px;">&nbsp 82分</span></span></td>
+													<td><div class="score_box"><img src="images/100.png" style="opacity:0.15;"></div></td>
+													<td><span><span class="num" style="font-size: 25px;">&nbsp 18分</span></span></td>
 												</tr>
 											</tbody>
 										</table>

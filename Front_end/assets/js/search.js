@@ -302,6 +302,7 @@ $(function(){
 
 });
 
+/*
 function enhancedRadio() 
 {  
 	var r = document.forms[0].elements[this.name];  
@@ -328,4 +329,4 @@ function deployRadioEvent()
 	}     
 }  
 
-deployRadioEvent();  
+deployRadioEvent();*/

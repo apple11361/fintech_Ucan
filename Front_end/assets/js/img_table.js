@@ -1,6 +1,6 @@
 
 var photo = 0;
-
+var id = document.body.id;
 
 function change(a)
 {
@@ -12,7 +12,7 @@ function change(a)
 		m.src = s.src;
 	}
 	
-	s.src = "../images/0/"+a+".jpg";
+	s.src = "../images/"+id+"/"+a+".jpg";
 	photo = a;
 }
 
@@ -29,7 +29,7 @@ function right()
 		m.src = s.src;
 	}
 	
-	s.src = "../images/0/"+photo+".jpg";
+	s.src = "../images/"+id+"/"+photo+".jpg";
 	
 }
 
@@ -46,6 +46,6 @@ function left()
 		m.src = s.src;
 	}
 	
-	s.src = "../images/0/"+photo+".jpg";
+	s.src = "../images/"+id+"/"+photo+".jpg";
 	
 }

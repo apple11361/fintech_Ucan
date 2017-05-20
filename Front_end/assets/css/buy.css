@@ -17,6 +17,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
+		font-family: Microsoft JhengHei;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1586,7 +1587,7 @@
 
 	body, input, select, textarea {
 		color: #9a9a9a;
-		font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+		font-family: Microsoft JhengHei;
 		font-size: 14pt;
 		font-weight: 400;
 		line-height: 1.65;

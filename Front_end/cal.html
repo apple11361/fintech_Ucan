@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Ucan</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/house.css" />
+		<link rel="Shortcut Icon" type="image/x-icon" href="images/title_icon.ico" />
+	</head>
+	
+	<body>
+	
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="../index.html" class="logo"><img width="230" height="108" src="images/logo.png"/></a>
+				<nav id="nav">
+					<input type="button" value="註冊">
+					<input type="button" value="登入">
+				</nav>
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+			<div class="inner">
+				<nav id="nav" align="center">
+					<a href="index.html">首頁</a>
+					<a href="buy.html">購屋</a>
+					<a href="elements.html">賣屋</a>
+					<a href="cal.html">房貸試算</a>
+					<a href="elements.html">行情地圖</a>
+					<a href="elements.html">生活地圖</a>
+					<a href="elements.html">Ucan plus</a>
+				</nav>
+			</div>
+		</header>
+	
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<div id="result_list">
+					<div class="loan_score" style="top:100px;left:500px;">
+						<form method="POST" style="text-align:left;">
+							<table cellspacing="1" cellpadding="3" style="border-collapse: collapse" border="1">
+								<tbody>
+								<tr> 
+									<td class="a">貸款金額($):</td>
+									<td class="a"> <input type="text" size="20" name="financed" onchange="test_it(this)" value=""></td>
+								</tr>
+								<tr> 
+									<td class="a">年利率(%):</td>
+									<td class="a"><input type="text" size="20" name="rate" onchange="test_it(this)" value="2.4"></td>
+								</tr>
+								<tr> 
+									<td class="a">貸款期數(月):</td>
+									<td class="a"><input type="text" size="20" name="months" onchange="test_it(this)" value="240"></td>
+								</tr>
+								<tr> 
+									<td class="a">每期應繳金額($):</td>
+									<td class="a"><input type="text" size="20" name="payment" onchange="test_it(this)"></td>
+								</tr>
+								<tr> 
+									<td class="a">全部應繳金額($):</td>
+									<td class="a"> <input type="text" size="20" name="total" onchange="test_it(this)"></td>
+								</tr>
+								<tr>
+									<td>&nbsp </td>
+								</tr>
+								<tr> 
+									<td class="a" colspan="2" align="center"> 
+									<input type="button" class="calculate" value="計 算" onclick="computeForm(this.form)"> 
+									<input type="reset" class="calculate" value="清 除" onclick="reset_it(this.form)">
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/img_table.js"></script>
+			<script src="assets/js/loan_score.js"></script>
+			
+	</body>
+</html>
+	

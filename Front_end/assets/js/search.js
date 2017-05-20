@@ -392,9 +392,16 @@ function search()
 		div_3.style.borderBottom = "1px dotted #D8D8D8";
 		div_4.style.borderBottom = "1px dotted #D8D8D8";
 	}
-	
-	
 }
+
+function hi()
+{
+	var a = document.location.href;
+	var b = a.lastIndexOf("/");
+	var c = a.substring(0, b);
+	document.location.href=c+"/buy.html";
+}
+
 
 
 

@@ -49,3 +49,11 @@ function left()
 	s.src = "../images/"+id+"/"+photo+".jpg";
 	
 }
+
+
+function trade()
+{
+	confirm("請確認是否進行交易，同意後將無法復原");
+	
+	
+}

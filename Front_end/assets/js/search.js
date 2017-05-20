@@ -353,11 +353,11 @@ function search()
 	
 	if(check_box_1.checked && check_box_3.checked)
 	{
-		div_0.innerHTML = inner_0;
-		div_1.innerHTML = inner_1;
-		div_2.innerHTML = inner_2;
-		div_3.innerHTML = inner_4;
-		div_4.innerHTML = inner_3;
+		div_0.innerHTML = inner_3;
+		div_1.innerHTML = inner_0;
+		div_2.innerHTML = inner_1;
+		div_3.innerHTML = inner_2;
+		div_4.innerHTML = inner_4;
 	}
 	else
 	{

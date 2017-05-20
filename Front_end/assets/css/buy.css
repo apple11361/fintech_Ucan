@@ -2680,14 +2680,14 @@
 
 			#result_list .result_item .item_box .item_imagebox {
 				width: 204px;
-				height: 154px;
+				height: 128px;
 				border: 1px solid #EDEDED;
 				position: relative;
 			}
 				
 				#result_list .result_item .item_box .item_imagebox .item_img {
 					width: 200px;
-					height: 150px;
+					height: 125px;
 					overflow: hidden;
 					position: absolute;
 					top: 2px;
@@ -2737,8 +2737,8 @@
 				
 				#result_list .result_item .item_box .item_detailbox .detail_right{
 					position: absolute;
-					top: 40px;
-					left: 200px;
+					top: 50px;
+					left: 300px;
 				}
 				
 					#result_list .result_item .item_box .item_detailbox .detail_right span{
